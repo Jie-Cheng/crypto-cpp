@@ -54,7 +54,6 @@ class BigInt {
     Multiplies two BigInt<N> numbers modulo a third.
   */
   static BigInt MulMod(const BigInt& a, const BigInt& b, const BigInt& modulus);
-
   /*
     Computes the inverse of *this in the field GF(prime).
     If prime is not a prime number, the behavior is undefined.
@@ -78,11 +77,14 @@ class BigInt {
     Returns the pair (q, r) such that this == q*divisor + r and r < divisor.
   */
   std::pair<BigInt, BigInt> Div(const BigInt& divisor) const;
+  BigInt ModPrime() const;
 
   /*
     Returns the representation of the number as a string of the form "0x...".
   */
   std::string ToString() const;
+
+  std::string ToString2() const;
 
   std::vector<bool> ToBoolVector() const;
 

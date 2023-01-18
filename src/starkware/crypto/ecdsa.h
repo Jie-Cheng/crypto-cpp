@@ -30,6 +30,10 @@ Signature SignEcdsa(
     const PrimeFieldElement::ValueType& private_key, const PrimeFieldElement& z,
     const PrimeFieldElement::ValueType& k);
 
+Signature SignEcdsa2(
+    const PrimeFieldElement::ValueType& private_key, const PrimeFieldElement& z,
+    const PrimeFieldElement::ValueType& k);
+
 /*
   Verifies ECDSA signature of a given hash message z with a given public key.
   Returns true if either public_key or -public_key signs the message.
